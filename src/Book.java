@@ -46,14 +46,14 @@ public class Book {
 
     public void settitle(String title) {
         if (title == null || title.trim().isEmpty()) {
-            throw new IllegalArgumentException("Title must not be empty");
+            throw new IllegalArgumentException("title must not be empty");
         }
         this.title = title.trim();
     }
 
     public void setauthor(String author) {
         if (author == null || author.trim().isEmpty()) {
-            throw new IllegalArgumentException("Author must not be empty");
+            throw new IllegalArgumentException("author must not be empty");
         }
         this.author = author.trim();
     }
@@ -61,7 +61,7 @@ public class Book {
     public void setyear(int year) {
         int currentYear = Year.now().getValue();
         if (year < 1500 || year > currentYear) {
-            throw new IllegalArgumentException("Year must be between 1500 and " + currentYear);
+            throw new IllegalArgumentException("year must be between 1500 and " + currentYear);
         }
         this.year = year;
     }
